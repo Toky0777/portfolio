@@ -4,6 +4,7 @@ import Button from '../common/Button';
 import { ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { profileData } from '../../data/initialData';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
   const scrollToNextSection = () => {
@@ -43,8 +44,12 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button size="lg">View My Work</Button>
-              <Button variant="outline" size="lg">Contact Me</Button>
+              <Link to="/#projects">
+                <Button size="lg">View My Work</Button>
+              </Link>
+              <Link to="/#contact">
+                <Button variant="outline" size="lg">Contact Me</Button>
+              </Link>
             </div>
           </motion.div>
         </div>

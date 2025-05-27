@@ -88,16 +88,16 @@ const Header = () => {
               {link.name}
             </Link>
           ))}
-          {/* <Link to="/admin/login">
-            <Button 
-              variant="outline" 
+          <Link to="/#contact">
+            <Button
+              variant="outline"
               size="sm"
               icon={<UserCircle size={16} />}
             >
-              Admin
+              Get in Touch
             </Button>
-          </Link> */}
-          <Button size="sm">Get in Touch</Button>
+          </Link>
+          {/* <Button size="sm">Get in Touch</Button> */}
         </nav>
 
         {/* Mobile Menu Toggle */}

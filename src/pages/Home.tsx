@@ -9,7 +9,6 @@ import About from '../components/sections/About';
 import Skills from '../components/sections/Skills';
 import CV from '../components/sections/CV';
 import Projects from '../components/sections/Projects';
-import Testimonials from '../components/sections/Testimonials';
 import Contact from '../components/sections/Contact';
 import { profileData } from '../data/initialData';
 
