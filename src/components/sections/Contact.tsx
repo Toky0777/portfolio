@@ -9,6 +9,9 @@ import { ContactFormData } from '../../types';
 import emailjs from '@emailjs/browser';
 import { profileData } from '../../data/initialData';
 
+// Initialize EmailJS
+emailjs.init("CdEFhOBWBkiOq7b11");
+
 const Contact: React.FC = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const [formData, setFormData] = useState<ContactFormData>({
@@ -71,17 +74,12 @@ const Contact: React.FC = () => {
     setSubmitStatus('idle');
 
     try {
-      // Note: In a real implementation, you would configure EmailJS with your service/template/user IDs
-      // This is a placeholder for demonstration
-      // await emailjs.sendForm(
-      //   'YOUR_SERVICE_ID',
-      //   'YOUR_TEMPLATE_ID',
-      //   formRef.current!,
-      //   'YOUR_PUBLIC_KEY'
-      // );
-
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await emailjs.sendForm(
+        'service_n5zxbzx',
+        'template_arheris',
+        formRef.current!,
+        'CdEFhOBWBkiOq7b11'
+      );
 
       setSubmitStatus('success');
       setFormData({
